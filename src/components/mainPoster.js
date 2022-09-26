@@ -1,11 +1,17 @@
 import poster1 from '../assets/poster1.png'
+import PhonePoster from './phonePoster'
 import PosterButton from './posterButton.js'
 
 function MainPoster() {
   return (
     <div className="w-full flex flex-col relative items-center">
-      <img src={poster1} alt="main poster" className="w-full object-fill" />
-      <div className="absolute top-1/2 translate-y-[-50%] flex flex-col items-center">
+      <img
+        src={poster1}
+        alt="main poster"
+        className="w-full object-fill relative -z-10"
+      />
+      <PhonePoster />
+      <div className="absolute top-[10%] flex flex-col items-center z-20">
         <p className="font-mont font-[700] text-[24px] leading-[36px] text-primary">
           Food app
         </p>

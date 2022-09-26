@@ -6,6 +6,9 @@ import CheckoutPhone from '../assets/checkout-phone.png'
 function ListHero() {
   return (
     <div className="w-full">
+      <p className="font-poppins font-[600] text-[44px] leading-[36px] text-center mt-16">
+        How the app works
+      </p>
       <Hero
         image={LoginPhone}
         title="Create an account"

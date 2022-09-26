@@ -3,7 +3,7 @@ import phone2 from '../assets/phone2.png'
 
 function PhonePoster() {
   return (
-    <div className="w-full h-[600px] flex relative justify-center">
+    <div className="w-full h-[600px] flex relative justify-center ">
       <img
         src={phone1}
         alt="phone"
