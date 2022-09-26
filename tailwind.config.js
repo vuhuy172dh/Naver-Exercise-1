@@ -10,6 +10,10 @@ module.exports = {
       poppins: ['Poppins', 'sans-serif'],
       roboto: ['Roboto', 'sans-serif']
     },
+    screens: {
+      sm: { min: '320px' },
+      lg: { min: '1024px' }
+    },
     extend: {
       colors: {
         primary: '#ffffff',
