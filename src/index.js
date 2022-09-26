@@ -4,6 +4,7 @@ import './styles/index.css'
 import Home from './pages/home.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/navbar.js'
+import Footer from './components/footer.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -16,5 +17,8 @@ root.render(
         <Route path="/" element={<Home />} />
       </Routes>
     </main>
+    <footer>
+      <Footer />
+    </footer>
   </BrowserRouter>
 )

@@ -16,7 +16,8 @@ module.exports = {
         secondary: '#fa4a0c',
         title: '#252b42',
         subtitle: '#737373',
-        footer: '#5c5c5c'
+        footer: '#5c5c5c',
+        divider: '#e4e4e4'
       }
     }
   },
