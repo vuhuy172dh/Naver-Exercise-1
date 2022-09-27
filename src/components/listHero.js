@@ -1,14 +1,18 @@
 import Hero from './hero.js'
-import LoginPhone from '../assets/phone-login.png'
-import ShoppingPhone from '../assets/shopping-phone.png'
-import CheckoutPhone from '../assets/checkout-phone.png'
+import LoginPhone from '../assets/LoginPhone.png'
+import ShoppingPhone from '../assets/ShoppingPhone.png'
+import PayPhone from '../assets/PayPhone.png'
+import Divider from './divider.js'
 
 function ListHero() {
   return (
     <div className="w-full">
-      <p className="font-poppins font-[600] text-[44px] leading-[36px] text-center mt-16">
-        How the app works
-      </p>
+      <div className="flex sm:flex-col lg:flex-col-reverse">
+        <p className="sm:my-10 lg:my-16 font-mont font-[600] sm:text-[24px] lg:text-[44px] leading-[36px] text-center">
+          How the app works
+        </p>
+        <Divider />
+      </div>
       <Hero
         image={LoginPhone}
         title="Create an account"
@@ -23,7 +27,7 @@ function ListHero() {
         type="reverse"
       />
       <Hero
-        image={CheckoutPhone}
+        image={PayPhone}
         title="Checkout"
         subtitle="When you done check out and get it delivered."
         disc="When you done check out and get it delivered with ease."
