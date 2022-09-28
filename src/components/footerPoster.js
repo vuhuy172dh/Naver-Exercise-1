@@ -7,12 +7,17 @@ function FooterPoster() {
 
   return (
     <div className="w-full relative">
-      <img
-        src={poster2}
-        alt="footer poster"
-        className="w-full object-fill relative z-0 lg:block sm:hidden"
-      />
-      <div className="w-full h-[35rem] relative z-0 bg-title sm:block lg:hidden"></div>
+      {/* this is footer poster backgroudn */}
+      <div className="w-full relative z-0 ">
+        <img
+          src={poster2}
+          alt="footer poster"
+          className="w-full object-fill lg:block sm:hidden"
+        />
+        <div className="w-full h-[35rem] bg-title sm:block lg:hidden"></div>
+      </div>
+
+      {/* this is content */}
       <div className="w-full h-full px-24 absolute top-0 z-10 flex flex-col gap-4 items-center justify-center text-center">
         <p className="font-mont font-[700] text-[40px] leading-[57px] text-white text-center">
           Download the app now.
