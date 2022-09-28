@@ -1,7 +1,10 @@
 import poster2 from '../assets/poster2.png'
 import PosterButton from './posterButton'
+import useWindowSize from '../hooks/useWindowSize.js'
 
 function FooterPoster() {
+  const size = useWindowSize()
+
   return (
     <div className="w-full relative">
       <img
@@ -14,28 +17,24 @@ function FooterPoster() {
         <p className="font-mont font-[700] text-[40px] leading-[57px] text-white text-center">
           Download the app now.
         </p>
-        <p className="font-mont font-[500] text-[24px] leading-[38px] text-[#bdbdbd] text-center sm:block lg:hidden">
-          Most calendars are designed for teams.
+        <p className="font-mont font-[500] text-[24px] leading-[38px] text-[#bdbdbd] text-center">
+          {size.width >= 1024
+            ? 'Available on your favorite store. Start your premium experience now'
+            : 'Most calendars are designed for teams.'}
         </p>
-        <p className="font-mont font-[500] text-[24px] leading-[38px] text-white text-center sm:hidden lg:block">
-          Available on your favorite store. Start your premium experience now
-        </p>
-        <div className="w-full sm:flex lg:hidden justify-center gap-6">
-          <PosterButton name="Buy now" type="primary" size="medium" />
+        <div className="w-full flex justify-center gap-6">
           <PosterButton
-            name="Try for free"
-            type="outline"
+            name={size.width >= 1024 ? 'Playstore' : 'Buy now'}
+            type="primary"
             size="medium"
-            color="white"
+            onClick={() => { }}
           />
-        </div>
-        <div className="w-full mt-12 sm:hidden lg:flex justify-center gap-6">
-          <PosterButton name="Playstore" type="primary" size="medium" />
           <PosterButton
-            name="App store"
+            name={size.width >= 1024 ? 'App store' : 'Try for free'}
             type="outline"
             size="medium"
             color="white"
+            onClick={() => { }}
           />
         </div>
       </div>

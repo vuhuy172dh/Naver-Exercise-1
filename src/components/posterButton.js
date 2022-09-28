@@ -5,11 +5,12 @@ const large = 'text-[24px] leading-[36px] rounded-[35px] px-14'
 const white = 'text-primary border-primary'
 const orange = 'text-secondary border-secondary'
 
-function PosterButton({ name, type, size, color }) {
+function PosterButton({ name, type, size, color, onClick }) {
   return (
     <button
       className={`${color === 'orange' ? orange : white} font-mont font-[700] ${size === 'medium' ? medium : large
         } py-5 ${type === 'primary' ? primary : outline}`}
+      onClick={onClick}
     >
       {name}
     </button>
